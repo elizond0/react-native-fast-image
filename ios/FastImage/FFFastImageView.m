@@ -105,7 +105,9 @@
                             if (error) {
                                 hasErrored = YES;
                                 if (_onFastImageError) {
-                                    _onFastImageError(@{});
+//                                    _onFastImageError(@{});
+                                    _onFastImageError(@{@"uri": _source.uri.absoluteString});
+
                                 }
                                 if (_onFastImageLoadEnd) {
                                     _onFastImageLoadEnd(@{});
@@ -120,7 +122,8 @@
                                     _onFastImageLoad(onLoadEvent);
                                 }
                                 if (_onFastImageLoadEnd) {
-                                    _onFastImageLoadEnd(@{});
+//                                    _onFastImageLoadEnd(@{});
+                                    _onFastImageLoadEnd(@{@"uri": _source.uri.absoluteString});
                                 }
                             }
                         }];
