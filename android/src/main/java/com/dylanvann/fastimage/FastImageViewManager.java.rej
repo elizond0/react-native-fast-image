@@ -1,0 +1,17 @@
+diff a/node_modules/react-native-fast-image/android/src/main/java/com/dylanvann/fastimage/FastImageViewManager.java b/node_modules/react-native-fast-image/android/src/main/java/com/dylanvann/fastimage/FastImageViewManager.java	(rejected hunks)
+@@ -77,8 +77,13 @@
+             ThemedReactContext context = (ThemedReactContext) view.getContext();
+             RCTEventEmitter eventEmitter = context.getJSModule(RCTEventEmitter.class);
+             int viewId = view.getId();
+-            eventEmitter.receiveEvent(viewId, REACT_ON_ERROR_EVENT, new WritableNativeMap());
+-            eventEmitter.receiveEvent(viewId, REACT_ON_LOAD_END_EVENT, new WritableNativeMap());
++            WritableMap map1 = Arguments.createMap();
++            map1.putString("uri",uri.toStringUrl());
++            eventEmitter.receiveEvent(viewId, REACT_ON_ERROR_EVENT,map1);
++
++            WritableMap map2 = Arguments.createMap();
++            map2.putString("uri",uri.toStringUrl());
++            eventEmitter.receiveEvent(viewId, REACT_ON_LOAD_END_EVENT, map2);
+             return false;
+         }
+ 

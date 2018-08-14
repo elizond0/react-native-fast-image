@@ -1,7 +1,72 @@
 {
-  "name": "react-native-fast-image",
-  "version": "4.0.14",
+  "_args": [
+    [
+      "react-native-fast-image@4.0.14",
+      "F:\\workSpace\\zczk\\plus-city"
+    ]
+  ],
+  "_from": "react-native-fast-image@4.0.14",
+  "_id": "react-native-fast-image@4.0.14",
+  "_inBundle": false,
+  "_integrity": "sha1-HoTJoBsUcXk+KU7058PMIOCVYqA=",
+  "_location": "/react-native-fast-image",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "react-native-fast-image@4.0.14",
+    "name": "react-native-fast-image",
+    "escapedName": "react-native-fast-image",
+    "rawSpec": "4.0.14",
+    "saveSpec": null,
+    "fetchSpec": "4.0.14"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://registry.npm.taobao.org/react-native-fast-image/download/react-native-fast-image-4.0.14.tgz",
+  "_spec": "4.0.14",
+  "_where": "F:\\workSpace\\zczk\\plus-city",
+  "author": {
+    "name": "Dylan Vann",
+    "email": "dylanvann@gmail.com",
+    "url": "http://dylanvann.com"
+  },
+  "bugs": {
+    "url": "https://github.com/DylanVann/react-native-fast-image/issues"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.10"
+  },
   "description": "🚩 FastImage, performant React Native image component.",
+  "devDependencies": {
+    "babel-jest": "^21.2.0",
+    "babel-preset-react-native": "^4.0.0",
+    "jest": "^21.2.1",
+    "prettier": "^1.12.1",
+    "prettier-check": "^2.0.0",
+    "react": "^16.3.0-alpha.1",
+    "react-native": "^0.54.1",
+    "react-test-renderer": "16.0.0"
+  },
+  "files": [
+    "ios/FastImage",
+    "ios/Vendor",
+    "ios/FastImage.xcodeproj",
+    "android",
+    "index.js",
+    "index.d.ts",
+    "react-native-fast-image.podspec"
+  ],
+  "homepage": "https://github.com/DylanVann/react-native-fast-image#readme",
+  "jest": {
+    "preset": "react-native",
+    "modulePathIgnorePatterns": [
+      "ReactNativeFastImageExample",
+      "ReactNativeFastImageCocoaPodsExample",
+      "react-native-fast-image-server"
+    ]
+  },
   "keywords": [
     "cache",
     "cached",
@@ -9,38 +74,18 @@
     "image",
     "priority"
   ],
-  "homepage": "https://github.com/DylanVann/react-native-fast-image#readme",
-  "bugs": {
-    "url": "https://github.com/DylanVann/react-native-fast-image/issues"
-  },
-  "license": "(MIT AND Apache-2.0)",
-  "author": "Dylan Vann <dylan@dylanvann.com> (https://dylanvann.com)",
-  "main": "src/index.js",
-  "types": "src/index.d.ts",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "react-native-fast-image",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DylanVann/react-native-fast-image.git"
   },
   "scripts": {
-    "format": "prettier --write --list-different ./src/*.js",
+    "format": "prettier --write --list-different ./*.js ./ReactNativeFastImageExample/src/*.js ./react-native-fast-image-server/*.js",
     "prepare": "git submodule update --init --recursive",
     "test": "yarn run format && yarn run test:jest",
-    "test:jest": "jest ./src/*.js"
+    "test:jest": "jest *.js"
   },
-  "devDependencies": {
-    "babel-jest": "^23.0.1",
-    "babel-preset-react-native": "^4.0.0",
-    "jest": "^23.1.0",
-    "prettier": "^1.13.4",
-    "prettier-check": "^2.0.0",
-    "prop-types": "^15.6.1",
-    "react": "^16.4.0",
-    "react-native": "^0.55.4",
-    "react-test-renderer": "16.4.0"
-  },
-  "peerDependencies": {
-    "prop-types": "*",
-    "react": "*",
-    "react-native": "*"
-  }
+  "version": "4.0.14"
 }
